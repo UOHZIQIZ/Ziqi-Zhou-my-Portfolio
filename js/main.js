@@ -231,7 +231,7 @@
     $$("[data-i18n]").forEach(function (n) { n.innerHTML = u(n.dataset.i18n); });
 
     $("#monogram").setAttribute("aria-label", P.monogram + " — " + u("navHome"));
-    $("#monogram").innerHTML = '<img class="brand-logo" src="images/cathy-zq-logo-v3.png" alt="Z.Q — Cathy" width="76" height="60">';
+    $("#monogram").innerHTML = '<img class="brand-logo" src="images/logo-green.png?v=20261020-green" alt="Z.Q — Cathy" width="76" height="60">';
     $("#heroTag").textContent = t(P.tag);
     $("#heroName").innerHTML = '<span class="hero-greeting">Hi, I\'m</span><span class="hero-person-name">' + esc(P.nameEn[0]) + "</span>";
     $("#heroTagline").textContent = t({en:"Designing connections between people, screens and the physical world.",zh:"探索人与屏幕、实体世界之间的交互。",zht:"探索人與螢幕、實體世界之間的互動。"});
@@ -802,44 +802,30 @@
   renderText();
   route();
 })();
-
 (function () {
-  var grid = document.getElementById("homeGrid");
+  var grid = document.getElementById('homeGrid');
   if (!grid || !window.IntersectionObserver || !Element.prototype.animate) return;
-  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
-  var seen = new WeakSet();
-  var active = new Set();
+  var reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var seen = new WeakSet(), active = new Set();
   var observer = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (!entry.isIntersecting) return;
-      var card = entry.target;
-      observer.unobserve(card);
-      if (reduced.matches || seen.has(card)) return;
-      seen.add(card);
-      var cards = Array.prototype.slice.call(grid.children);
-      var animation = card.animate([
-        { opacity: 0, transform: "translateY(32px)" },
-        { opacity: 1, transform: "translateY(0)" }
-      ], {
-        duration: 760,
-        delay: Math.max(0, cards.indexOf(card)) * 120,
-        easing: "cubic-bezier(.22,1,.36,1)",
-        fill: "backwards"
-      });
+      observer.unobserve(entry.target);
+      if (reduced.matches || seen.has(entry.target)) return;
+      seen.add(entry.target);
+      var animation = entry.target.animate([
+        {opacity:0,transform:'translateY(32px)'},
+        {opacity:1,transform:'translateY(0)'}
+      ], {duration:800,easing:'cubic-bezier(.22,1,.36,1)'});
       active.add(animation);
       animation.onfinish = animation.oncancel = function () { active.delete(animation); };
     });
-  }, { threshold: 0.12 });
+  }, {threshold:0.12});
   function observeCards() {
     observer.disconnect();
-    grid.querySelectorAll(".tile").forEach(function (card) {
-      if (!seen.has(card)) observer.observe(card);
-    });
+    grid.querySelectorAll('.tile').forEach(function (card) { if (!seen.has(card)) observer.observe(card); });
   }
-  new MutationObserver(observeCards).observe(grid, { childList: true });
-  function stopMotion() {
-    if (reduced.matches) active.forEach(function (animation) { animation.cancel(); });
-  }
-  reduced.addEventListener("change", stopMotion);
+  new MutationObserver(observeCards).observe(grid,{childList:true});
+  reduced.addEventListener('change',function () { if(reduced.matches) active.forEach(function (a) {a.cancel();}); });
   observeCards();
 })();

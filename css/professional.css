@@ -206,3 +206,32 @@ body { color:#335C52; }
 
 .card-year { display:block; width:100%; text-align:left; color:#B58B4D; font-size:13px; letter-spacing:.04em; padding-top:18px; margin-top:auto; }
 .course-head>.eyebrow,.module-section>.eyebrow { text-transform:none; letter-spacing:.05em; line-height:1.6; }
+#homeGrid.works {display:grid;grid-template-columns:minmax(0,1fr)!important;gap:0!important}
+#homeGrid.works .tile {position:relative;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.85fr);align-items:center;gap:clamp(32px,6vw,80px);padding:56px 0;border-top:1px solid var(--line-soft);transition:transform .4s ease}
+#homeGrid.works .tile:last-child {border-bottom:1px solid var(--line-soft)}
+#homeGrid .tile__media {width:100%;aspect-ratio:16/10!important;overflow:hidden;margin:0;transition:border-color .4s,box-shadow .4s}
+#homeGrid .tile__media img {transition:transform .85s cubic-bezier(.22,1,.36,1)}
+#homeGrid .tile__cap {min-width:0;display:flex;flex-direction:column;padding:24px 0;gap:16px}
+#homeGrid .tile__title {font-size:clamp(34px,4vw,56px);line-height:1.08;margin:0}
+#homeGrid .tile__intro {font-size:16px;line-height:1.8;margin:0}
+#homeGrid .project-kicker {font-size:11px;letter-spacing:.12em}
+#homeGrid .project-tags {font-size:12px;line-height:1.7;margin:0}
+#homeGrid .project-read {align-self:flex-start;display:inline-block;margin-top:8px;padding-bottom:5px;border-bottom:1px solid var(--gold);transition:transform .4s,color .4s}
+#homeGrid .card-year {padding-top:8px;margin-top:0}
+#homeGrid .tile:nth-child(even) {grid-template-columns:minmax(0,.85fr) minmax(0,1.35fr)}
+#homeGrid .tile:nth-child(even) .tile__media {grid-column:2;grid-row:1}
+#homeGrid .tile:nth-child(even) .tile__cap {grid-column:1;grid-row:1}
+#homeGrid .tile__link:focus-visible {outline:2px solid #B58B4D;outline-offset:8px}
+@media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference) {
+ #homeGrid.works .tile:hover {transform:translateY(-5px)}
+ #homeGrid .tile:hover .tile__media {border-color:#B58B4D;box-shadow:0 12px 28px rgba(51,92,82,.1)}
+ #homeGrid .tile:hover .tile__media img {transform:scale(1.035)}
+ #homeGrid .tile:hover .project-read {transform:translateX(5px);color:#B58B4D}
+}
+@media(max-width:750px) {
+ #homeGrid.works .tile,#homeGrid.works .tile:nth-child(even) {grid-template-columns:minmax(0,1fr);gap:0;padding:32px 0}
+ #homeGrid .tile:nth-child(even) .tile__media,#homeGrid .tile:nth-child(even) .tile__cap {grid-column:auto;grid-row:auto}
+ #homeGrid .tile__cap {padding:24px 0 8px}
+ #homeGrid .tile__title {font-size:36px}
+}
+@media(prefers-reduced-motion:reduce) {#homeGrid .tile,#homeGrid .tile__media,#homeGrid .tile__media img,#homeGrid .project-read {transition:none!important;animation:none!important}}

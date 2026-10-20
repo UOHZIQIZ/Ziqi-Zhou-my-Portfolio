@@ -1,0 +1,73 @@
+:root {--art-gold:#B58B4D;--art-green:#335C52;--art-paper:#FAF9F4}
+body {background-color:#f7f5ef;background-image:radial-gradient(rgba(51,92,82,.045) .6px,transparent .6px);background-size:5px 5px}
+.nav {background:rgba(250,249,244,.95);backdrop-filter:blur(14px)}
+.nav__links a {position:relative}
+.nav__links a::after {content:"";position:absolute;bottom:2px;left:0;right:0;height:1px;background:var(--art-gold);transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.nav__links a:hover::after,.nav__links a[aria-current="page"]::after {transform:scaleX(1)}
+.page[data-page="home"] .hero {position:relative;overflow:hidden;background-image:radial-gradient(ellipse at center,rgba(181,139,77,.07),transparent 65%)}
+.page[data-page="home"] .hero .wrap.hero__grid {padding-block:clamp(80px,10vw,150px)}
+.page[data-page="home"] .hero .hero-copy::before {content:"";position:absolute;inset:-34px -18px;border:1px solid rgba(181,139,77,.2);border-radius:50%;pointer-events:none;z-index:-1}
+.page[data-page="home"] .hero .eyebrow {letter-spacing:.22em;font-size:11px;margin-bottom:28px}
+.page[data-page="home"] .hero .hero__name {gap:6px}
+.page[data-page="home"] .hero .hero__name .hero-greeting {font-size:clamp(30px,3.5vw,46px);font-style:italic;color:var(--art-gold)}
+.page[data-page="home"] .hero .hero__name .hero-person-name {font-size:clamp(68px,10vw,140px);font-weight:400;font-style:italic;letter-spacing:-.055em;line-height:1.02}
+.page[data-page="home"] .hero .hero__tagline {font-family:var(--f-display);font-size:clamp(25px,3vw,39px);line-height:1.3;margin-top:26px}
+.page[data-page="home"] .hero .hero__intro {font-size:14px;line-height:1.9;max-width:520px;opacity:.85}
+.hero__cta {gap:14px}
+.btn {border-radius:2px;transition:background .25s,color .25s,transform .25s}
+.btn:hover {transform:translateY(-2px)}
+.section__title {font-style:italic;font-weight:400;line-height:1.1}
+.page[data-page="home"] section[aria-labelledby="homeWorksTitle"] {padding-block:86px 48px}
+.page[data-page="home"] .section__head {align-items:end;margin-bottom:44px}
+#homeWorksTitle {font-size:clamp(44px,6vw,74px);letter-spacing:-.045em}
+.more-link {font-size:13px;text-decoration-thickness:1px;text-underline-offset:6px}
+#homeGrid.works .tile {padding:64px 0;gap:clamp(36px,6vw,86px)}
+#homeGrid .tile__media {position:relative;border:1px solid rgba(51,92,82,.13);background:var(--art-paper);padding:14px;box-shadow:0 12px 35px rgba(51,92,82,.045)}
+#homeGrid .tile__media img {object-fit:contain;background:var(--art-paper)}
+#homeGrid .tile__title {font-style:italic;font-size:clamp(40px,4.5vw,64px);letter-spacing:-.04em;line-height:1.04}
+#homeGrid .tile__cap {gap:20px}
+#homeGrid .project-kicker {letter-spacing:.15em;font-size:10px;line-height:1.8}
+#homeGrid .tile__intro {font-size:15px;line-height:1.9;max-width:35em}
+#homeGrid .project-tags {font-size:11px;opacity:.8}
+#homeGrid .card-year {font-family:var(--f-display);font-style:italic;font-size:19px}
+#homeGrid .project-read {border-bottom-color:rgba(181,139,77,.6);font-size:13px;padding-bottom:7px}
+.home-philosophy {position:relative;padding:64px 0 84px}
+.home-philosophy .paper-box {position:relative;border:1px solid rgba(181,139,77,.3);padding:clamp(32px,6vw,68px);background:rgba(250,249,244,.8)}
+.home-philosophy .paper-box::before {content:"“";display:block;font-family:var(--f-display);font-size:88px;line-height:.7;color:var(--art-gold);height:48px}
+.home-philosophy .paper-box h3 {font-style:italic;font-size:clamp(30px,3.5vw,44px);line-height:1.25}
+.home-philosophy .paper-box p {max-width:780px;line-height:1.9;font-size:15px}
+.home-philosophy>.wrap>.more-link {display:inline-block;margin-top:20px}
+.page-head h1 {font-family:var(--f-display);font-style:italic;font-weight:400;letter-spacing:-.04em;font-size:clamp(52px,7vw,88px);line-height:1.1}
+.page[data-page="works"] .page-head {padding-block:54px}
+.page[data-page="about"] .about-intro-head {padding-block:70px}
+.about-intro-copy .about__p {max-width:39em}
+.about-photo-controls button {border-radius:50%;border-color:rgba(51,92,82,.4)}
+.paper-box.philosophy__body {border-top:1px solid rgba(181,139,77,.35)}
+.principles>li {border-color:rgba(181,139,77,.25)}
+#worksGrid .tile__title {font-style:italic;font-size:clamp(28px,3vw,40px)}
+#worksGrid .tile__media {padding:10px;border-color:rgba(181,139,77,.24)}
+.course-head h1 {font-style:italic;font-weight:400}
+.module-section {border-top:1px solid rgba(181,139,77,.28);background:rgba(250,249,244,.9)}
+.module-section h2 {font-style:italic}
+.contact .letter__title {font-style:italic;font-size:clamp(44px,5.4vw,76px);line-height:1.1;font-weight:400}
+.contact .letter__email {text-underline-offset:7px;text-decoration-thickness:1px}
+.contact-cards {border-color:rgba(181,139,77,.3)}
+.footer {border-top:1px solid rgba(181,139,77,.25);font-size:12px}
+@media(max-width:750px) {
+ .page[data-page="home"] .hero .wrap.hero__grid {padding-block:84px 96px}
+ .page[data-page="home"] .hero .hero-copy::before {inset:-25px 0;border-radius:46%}
+ .page[data-page="home"] .hero .hero__name .hero-person-name {font-size:clamp(62px,13vw,96px)}
+ .page[data-page="home"] .hero .hero__intro {max-width:85%;font-size:14px}
+ #homeGrid.works .tile {padding:38px 0;gap:0}
+ #homeGrid .tile__media {padding:9px}
+ #homeGrid .tile__title {font-size:42px}
+ .page[data-page="home"] section[aria-labelledby="homeWorksTitle"] {padding-top:52px}
+ .page[data-page="home"] .section__head {align-items:start;gap:20px}
+ .home-philosophy {padding:40px 0 56px}
+ .contact .letter__title {font-size:clamp(32px,7vw,48px)}
+}
+@media(prefers-reduced-motion:reduce) {.btn,.nav__links a::after {transition:none!important}.btn:hover {transform:none}}
+@media(prefers-reduced-motion:no-preference) {
+ .hero-copy {animation:art-intro 1s cubic-bezier(.22,1,.36,1) both}
+ @keyframes art-intro {from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+}
