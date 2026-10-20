@@ -246,7 +246,7 @@
       return '<li class="principle"><h3>' + esc(t(x.title)) + "</h3><p>" + esc(t(x.text)) + "</p></li>";
     }).join(""));
 
-    setAll(".js-home-philosophy", "<h3>" + esc(t(ph.lead)) + "</h3><p>" + esc(t(ph.principles[0].text)) + "</p>");
+    setAll(".js-home-philosophy", "<h2>" + esc(u("philosophyTitle")) + "</h2><div class=\"home-philosophy-copy\"><p class=\"home-philosophy-lead\">" + esc(t(ph.lead)) + "</p><p>" + esc(t(ph.principles[0].text)) + "</p></div>");
 
     textAll(".hero-photo-label", t({en:"Your photo",zh:"照片位置",zht:"照片位置",ja:"写真",fr:"Votre photo",ko:"사진"}));
     textAll(".js-portrait-label", t({en:"Portrait photo",zh:"个人照片",zht:"個人照片",ja:"ポートレート",fr:"Portrait",ko:"프로필 사진"}));
