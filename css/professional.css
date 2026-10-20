@@ -206,3 +206,48 @@ body { color:#335C52; }
 
 .card-year { display:block; width:100%; text-align:left; color:#B58B4D; font-size:13px; letter-spacing:.04em; padding-top:18px; margin-top:auto; }
 .course-head>.eyebrow,.module-section>.eyebrow { text-transform:none; letter-spacing:.05em; line-height:1.6; }
+
+@media (prefers-reduced-motion: no-preference) {
+  #homeGrid.works .tile {
+    transition: transform 420ms cubic-bezier(.22,1,.36,1);
+  }
+  #homeGrid .tile__media {
+    overflow: hidden;
+    transition: border-color 420ms ease, box-shadow 420ms ease;
+  }
+  #homeGrid .tile__media img {
+    transition: transform 850ms cubic-bezier(.22,1,.36,1);
+    transform-origin: center;
+  }
+  #homeGrid .project-read {
+    display: inline-block;
+    transition: transform 360ms ease, color 360ms ease;
+  }
+  #homeGrid .tile:focus-within {
+    transform: translateY(-6px);
+  }
+  #homeGrid .tile:focus-within .tile__media {
+    border-color: #B58B4D;
+    box-shadow: 0 12px 28px rgba(51,92,82,.1);
+  }
+  #homeGrid .tile:focus-within .tile__media img {
+    transform: scale(1.045);
+  }
+  #homeGrid .tile:focus-within .project-read {
+    transform: translateX(5px);
+    color: #B58B4D;
+  }
+}
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  #homeGrid.works .tile:hover { transform: translateY(-6px); }
+  #homeGrid .tile:hover .tile__media {
+    border-color: #B58B4D;
+    box-shadow: 0 12px 28px rgba(51,92,82,.1);
+  }
+  #homeGrid .tile:hover .tile__media img { transform: scale(1.045); }
+  #homeGrid .tile:hover .project-read { transform: translateX(5px); color: #B58B4D; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #homeGrid.works .tile, #homeGrid .tile__media, #homeGrid .tile__media img,
+  #homeGrid .project-read { transition: none !important; animation: none !important; }
+}
