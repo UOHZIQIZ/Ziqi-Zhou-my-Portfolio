@@ -802,3 +802,44 @@
   renderText();
   route();
 })();
+
+(function () {
+  var grid = document.getElementById("homeGrid");
+  if (!grid || !window.IntersectionObserver || !Element.prototype.animate) return;
+  var reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
+  var seen = new WeakSet();
+  var active = new Set();
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (!entry.isIntersecting) return;
+      var card = entry.target;
+      observer.unobserve(card);
+      if (reduced.matches || seen.has(card)) return;
+      seen.add(card);
+      var cards = Array.prototype.slice.call(grid.children);
+      var animation = card.animate([
+        { opacity: 0, transform: "translateY(32px)" },
+        { opacity: 1, transform: "translateY(0)" }
+      ], {
+        duration: 760,
+        delay: Math.max(0, cards.indexOf(card)) * 120,
+        easing: "cubic-bezier(.22,1,.36,1)",
+        fill: "backwards"
+      });
+      active.add(animation);
+      animation.onfinish = animation.oncancel = function () { active.delete(animation); };
+    });
+  }, { threshold: 0.12 });
+  function observeCards() {
+    observer.disconnect();
+    grid.querySelectorAll(".tile").forEach(function (card) {
+      if (!seen.has(card)) observer.observe(card);
+    });
+  }
+  new MutationObserver(observeCards).observe(grid, { childList: true });
+  function stopMotion() {
+    if (reduced.matches) active.forEach(function (animation) { animation.cancel(); });
+  }
+  reduced.addEventListener("change", stopMotion);
+  observeCards();
+})();
