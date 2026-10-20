@@ -1,0 +1,290 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ziqi Zhou · Cathy · Portfolio</title>
+<link rel="icon" href="favicon-zq-v4.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-zq-32-v4.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon-zq-180-v4.png">
+<meta name="description" content="Ziqi Zhou (Cathy) · Interaction Design · Sheridan College">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&amp;family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Noto+Serif+SC:wght@400;600;700&amp;display=swap">
+<link rel="stylesheet" href="css/style.css?v=20261019-course-metadata">
+<link rel="stylesheet" href="css/refinement.css?v=20261019-course-metadata">
+<link rel="stylesheet" href="css/reference-layout.css?v=20261019-course-metadata">
+<link rel="stylesheet" href="css/professional.css?v=20261019-course-metadata">
+</head>
+<body>
+
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+
+<header class="nav">
+  <div class="wrap nav__inner">
+    <a class="nav__mark" href="#home" id="monogram" aria-label="Cathy — Home"><img class="brand-logo" src="images/cathy-zq-logo-v3.png" alt="Z.Q — Cathy"></a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="#home" data-page="home" data-i18n="navHome">Home</a>
+      <a href="#works" data-page="works" data-i18n="navWorks">Works</a>
+      <a href="#about" data-page="about" data-i18n="navAbout">About</a>
+      <a href="#contact" data-page="contact" data-i18n="navContact">Contact</a>
+    </nav>
+    <div class="nav__right">
+    
+    <label class="lang">
+      <span class="sr" data-i18n="language">Language</span>
+      <select id="langSelect">
+        <option value="zh">Simplified Chinese</option>
+        <option value="zht">Traditional Chinese</option>
+        <option value="en">English</option>
+        <option value="ja">Japanese</option>
+        <option value="fr">French</option>
+        <option value="ko">Korean</option>
+      </select>
+    </label>
+    </div>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+<div class="page" data-page="visual-course" hidden><div class="wrap" id="visualCourseContent"></div></div>
+
+  <div class="page" data-page="home">
+    <section class="hero">
+      <div class="hero__decor" aria-hidden="true">
+        <img class="deco deco--lilies-l" src="images/bg/lilies-paint.webp" alt="" width="520" height="615">
+        <img class="deco deco--lilies-r" src="images/bg/lilies-paint.webp" alt="" width="520" height="615">
+        
+      </div>
+      <div class="wrap hero__grid">
+        <div class="hero__card paper-card"><div class="hero-copy">
+          
+          <p class="eyebrow" id="heroTag"></p>
+          <h1 class="hero__name" id="heroName"><span class="hero-greeting">Hi, I'm</span><span class="hero-person-name">Ziqi Zhou</span></h1>
+          <p class="hero__tagline" id="heroTagline"></p>
+          <p class="hero__intro" id="heroBio"></p>
+          <div class="hero__cta">
+            <a class="btn btn--ink" href="#works" data-i18n="ctaWorks">View works</a>
+            <a class="btn btn--line" href="#about" data-i18n="ctaAbout">About me</a>
+          </div>
+        </div><figure class="hero-photo"><div class="hero-photo-slot"><span class="hero-photo-label">Photo</span></div><figcaption class="hero-photo-caption">Ziqi Zhou · Cathy</figcaption></figure></div>
+
+      </div>
+    </section>
+    <div class="lace-divider" aria-hidden="true"></div>
+
+    <section class="section" aria-labelledby="homeWorksTitle">
+      <div class="wrap">
+        <div class="section__head">
+          <div>
+            
+            <h2 class="section__title" id="homeWorksTitle" data-i18n="worksTitle">Selected Works</h2>
+          </div>
+          <a class="more-link" href="#works" data-i18n="viewAll">View all works →</a>
+        </div>
+        <div class="works" id="homeGrid"></div>
+      </div>
+    </section>
+    <div class="lace-divider" aria-hidden="true"></div>
+
+    <section class="section home-philosophy"><div class="wrap"><div class="paper-box js-home-philosophy"></div><a class="more-link" href="#philosophy" data-i18n="philosophyTitle">Design Philosophy</a></div></section>
+    
+    <section class="section" aria-labelledby="homeAboutTitle">
+      <div class="wrap">
+        <div class="section__head">
+          <div>
+            
+            <h2 class="section__title js-about-heading" id="homeAboutTitle"></h2>
+          </div>
+          <a class="more-link" href="#about" data-i18n="aboutMore">About &amp; résumé →</a>
+        </div>
+        <div class="about">
+          <div class="paper-box about__text">
+            <div class="js-about-paras"></div>
+            <ul class="chips js-about-chips"></ul>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <section class="contact">
+      <img class="contact__lilies contact__lilies--l" src="images/bg/lilies-paint.webp" alt="" aria-hidden="true" width="520" height="615">
+      <img class="contact__lilies contact__lilies--r" src="images/bg/lilies-paint.webp" alt="" aria-hidden="true" width="520" height="615">
+      
+      <div class="wrap">
+        <div class="letter">
+          <span class="seal js-seal" aria-hidden="true">C</span>
+          
+          <h2 class="letter__title js-contact-heading"></h2>
+          <p class="letter__sub js-contact-sub"></p>
+          <div class="letter__row">
+            <span class="letter__email js-email"></span>
+            <button class="btn btn--ink js-copy" type="button" data-i18n="copy">Copy email</button>
+          </div>
+          <p class="toast js-toast" role="status" aria-live="polite"></p>
+          <ul class="contact-cards js-contact-cards"></ul>
+          <p class="letter__note js-contact-note"></p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="page" data-page="works" hidden="">
+    <header class="page-head"><img class="ornament-flower ornament-flower--left" src="images/bg/lilies-paint.webp" alt="" aria-hidden="true"><img class="ornament-flower ornament-flower--right" src="images/bg/lilies-paint.webp" alt="" aria-hidden="true">
+
+      <div class="wrap"><div class="page-head__card">
+        
+        <h1 class="section__title" data-i18n="worksTitle" tabindex="-1">Selected Works</h1>
+        <p class="page-head__lead" data-i18n="worksLead">Each project documents the journey from problem to outcome. Select a card to read the full case study.</p>
+      </div></div>
+    </header>
+    <section class="section section--tight" aria-label="Works">
+      <div class="wrap">
+        
+        <div class="filters" id="filters" role="tablist"></div>
+        <div class="works" id="worksGrid"></div>
+      </div>
+    </section>
+  </div>
+
+  <div class="page" data-page="about" hidden="">
+    <header class="page-head about-intro-head"><img class="ornament-flower ornament-flower--left" src="images/bg/lilies-paint.webp" alt="" aria-hidden="true"><img class="ornament-flower ornament-flower--right" src="images/bg/lilies-paint.webp" alt="" aria-hidden="true">
+      <div class="wrap"><div class="page-head__card about-intro-layout">
+        <div class="about-intro-copy">
+          <h1 class="section__title js-about-heading" tabindex="-1"></h1>
+          <div class="js-about-paras"></div>
+          <ul class="chips js-about-chips"></ul>
+          <nav class="page-head__jump" aria-label="On this page">
+            <a href="#philosophy" data-i18n="philosophyTitle">Design Philosophy</a>
+            <a href="#resume" data-i18n="resumeTitle">Education &amp; Experience</a>
+          </nav>
+        </div>
+        <div class="about-photo-gallery" role="region" aria-label="Personal photos" aria-roledescription="carousel" tabindex="0">
+          <div class="portrait-card-stack" id="portraitCardStack"><figure class="portrait-card" data-photo="0" data-slot="0"><img src="images/portraits/portrait-1.jpg" alt="Personal photo 1 of 3"></figure><figure class="portrait-card" data-photo="1" data-slot="1" aria-hidden="true"><img src="images/portraits/portrait-2.jpg" alt="Personal photo 2 of 3"></figure><figure class="portrait-card" data-photo="2" data-slot="2" aria-hidden="true"><img src="images/portraits/portrait-3.jpg" alt="Personal photo 3 of 3"></figure></div>
+          <div class="about-photo-controls"><button type="button" id="aboutPhotoPrev" aria-label="Previous photo" aria-controls="portraitCardStack">&lt;</button><span id="aboutPhotoCount" role="status" aria-live="polite">1 / 3</span><button type="button" id="aboutPhotoNext" aria-label="Next photo" aria-controls="portraitCardStack">&gt;</button></div>
+        </div>
+      </div></div>
+    </header>
+    <div class="ivy-divider" aria-hidden="true"></div>
+
+    <section class="section" id="philosophy" aria-labelledby="philosophyTitle">
+      <div class="wrap">
+        <div class="philosophy">
+          <div class="philosophy__head">
+            
+            <h2 class="section__title section__title--gap" id="philosophyTitle" data-i18n="philosophyTitle">Design Philosophy</h2>
+          </div>
+          <div class="paper-box philosophy__body">
+            <p class="philosophy__lead js-phil-lead"></p>
+            <ol class="principles js-principles"></ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ivy-divider" aria-hidden="true"></div>
+
+    <section class="section" id="resume" aria-labelledby="aboutResumeTitle">
+      <div class="wrap">
+        <div class="section__head">
+          <div>
+            
+            <h2 class="section__title" id="aboutResumeTitle" data-i18n="resumeTitle">Education &amp; Experience</h2>
+          </div>
+          <a class="btn btn--ink resume-link" href="#" target="_blank" rel="noopener" data-i18n="resumeDownload">Résumé PDF</a>
+        </div>
+        <div class="resume">
+          <div class="ledger">
+            <h3 class="subhead" data-i18n="education">Education</h3>
+            <ol class="timeline js-edu"></ol>
+            <h3 class="subhead subhead--gap" data-i18n="experience">Experience &amp; Leadership</h3>
+            <ol class="timeline js-exp"></ol>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="page" data-page="contact" hidden="">
+    <section class="contact">
+      <img class="contact__lilies contact__lilies--l" src="images/bg/lilies-paint.webp" alt="" aria-hidden="true" width="520" height="615">
+      <img class="contact__lilies contact__lilies--r" src="images/bg/lilies-paint.webp" alt="" aria-hidden="true" width="520" height="615">
+      
+      <div class="wrap">
+        <div class="letter">
+          <span class="seal js-seal" aria-hidden="true">C</span>
+          
+          <h1 class="letter__title js-contact-heading" tabindex="-1"></h1>
+          <p class="letter__sub js-contact-sub"></p>
+          <div class="letter__row">
+            <span class="letter__email js-email"></span>
+            <button class="btn btn--ink js-copy" type="button" data-i18n="copy">Copy email</button>
+          </div>
+          <p class="toast js-toast" role="status" aria-live="polite"></p>
+          <ul class="contact-cards js-contact-cards"></ul>
+          <p class="letter__note js-contact-note"></p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <article class="page case" data-page="case" id="case" hidden="">
+    <div class="wrap">
+      <a class="case__back" href="#works" data-i18n="allWorks">← All works</a>
+
+      <header class="case__head">
+        <p class="type case__eyebrow" id="caseEyebrow"></p>
+        <h1 class="case__title" id="caseTitle" tabindex="-1"></h1>
+        <p class="case__en" id="caseSub"></p>
+        <p class="case__summary" id="caseSummary"></p>
+        <ul class="case__tags" id="caseTags"></ul>
+        <div class="case__actions" id="caseActions"></div>
+      </header>
+
+      <figure class="case__hero" id="caseHero"></figure>
+
+      <dl class="glance" id="caseGlance"></dl>
+
+      <div class="case__body">
+        <nav class="case__toc" aria-label="On this page"><p data-i18n="onThisPage">On this page</p><ol id="caseToc"></ol></nav>
+        <div class="case__content" id="caseContent"></div>
+      </div>
+
+      <nav class="case__pager" id="casePager" aria-label="More work"></nav>
+    </div>
+  </article>
+<article class="page course-page" data-page="course" hidden=""><div class="wrap" id="courseContent"></div></article>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <span id="footName">© Ziqi Zhou</span>
+    <span id="footLinks" class="footer__links"></span>
+    <button type="button" class="footer__top" id="toTop" data-i18n="backTop">Back to top ↑</button>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox" hidden="">
+  <button class="lightbox__btn lightbox__close" type="button" id="lbClose" aria-label="Close">×</button>
+  <button class="lightbox__btn lightbox__prev" type="button" id="lbPrev" aria-label="Previous">‹</button>
+  <img id="lbImg" alt="">
+  <button class="lightbox__btn lightbox__next" type="button" id="lbNext" aria-label="Next">›</button>
+  <p class="lightbox__count type" id="lbCount"></p>
+</div>
+
+<div class="pdf-full" id="pdfFull" hidden="">
+  <div class="pdf-full__bar">
+    <span class="type" id="pdfFullLabel"></span>
+    <button class="lightbox__btn" type="button" id="pdfFullClose" aria-label="Close">×</button>
+  </div>
+  <iframe id="pdfFullFrame" title="PDF"></iframe>
+</div>
+
+<script src="js/data.js?v=20261019-course-metadata"></script>
+<script src="js/vdc-data.js?v=20261019-course-metadata"></script>
+<script src="js/flora.js?v=20261019-course-metadata"></script>
+<script src="js/diagrams.js?v=20261019-course-metadata"></script>
+<script src="js/art-data.js?v=20261019-course-metadata"></script>
+<script src="js/main.js?v=20261019-course-metadata"></script>
+
+<script src="js/portrait-gallery.js?v=2"></script>
+</body></html>

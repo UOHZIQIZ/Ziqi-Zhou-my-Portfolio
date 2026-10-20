@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Media Motion and the Body Winter 2026</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {
+  font-family: "Poppins", sans-serif
+  }
+body {
+  font-size:16px;
+  }
+h1 { 
+  font-size:30px;
+  }
+h2 {
+  font-size:25px;
+  }
+  h3 {
+  font-size:18px;
+  }
+img {
+  width: 100%;
+  height: 100%;
+}
+.grid {
+  display: inline-grid;
+  grid-template-columns: auto auto auto auto auto;
+}
+.w3-half img{
+  margin-bottom:-6px;
+  margin-top:16px;
+  opacity:0.8;
+  cursor:pointer
+  } */
+.w3-half img:hover{
+  opacity:1
+  }
+
+.container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+    /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+.responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+</style>
+<body>
+
+<nav class="w3-sidebar w3-light-grey w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:200px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-display-topleft" style="display:none;font-size:22px"></a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>IXD<br>DESN 22848<br> Winter 2026</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#Home" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+    <a href="#Module1" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Module 1</a> 
+    <a href="#Activity1" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Activity 1</a> 
+    <a href="#Activity2" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Activity 2</a> 
+    <a href="#Project1" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Project 1</a> 
+  </div>
+</nav>
+
+<div class="w3-overlay" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<div class="w3-main" style="margin-left:220px;margin-right:20px">
+
+  <div class="w3-container" style="margin-top:80px" id="default">
+    <h1 class="w3-jumbo" id="Home"><b>Module 1 Formstorming</b></h1>
+    <h1 class="w3-xxxlarge w3-text-blue"><b>Weekly Activity Template</b></h1>
+      <h1 class="w3-xxxlarge w3-text-blue"><b>Ziqi Zhou</b></h1>
+    <hr style="width:50px;border:5px solid grey" class="w3-round">
+  </div>
+  
+  <div id="Module1" class="w3-container" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Project 1</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <h2>Module 1</h2>
+    <h3>In Activity One, I constructed a series of interactive circuit prototypes using graphite pencil marks, copper tape, paper, and LEDs. By utilizing materials provided in class, I explored how interactive circuits function and employed various methods to test circuit continuity. This activity profoundly demonstrated to me that materials are not merely physical mediums but also carriers of cultural symbols.
+    </h3>
+  </div>
+
+  <div id="Activity1" >
+    <h2>Activity 1</h2>
+    <div class="grid">
+      <img src="images/Activity1/1.jpg" style="width:100%" onclick="onClick(this)" alt="Materials used: Graphite pencil, ink pen, ruler, wire, battery, copper tape, paper, LED.">
+      <img src="images/Activity1/2.jpg" style="width:100%" onclick="onClick(this)" alt="Use a pencil to sketch interactive circuit prototypes.">
+      <img src="images/Activity1/3.jpg" style="width:100%" onclick="onClick(this)" alt="Prototype 1: Construct an interactive circuit prototype using a battery, copper tape, and one LED.">
+      <img src="images/Activity1/4.jpg" style="width:100%" onclick="onClick(this)" alt="Prototype 1: Construct an interactive circuit prototype using a battery, copper tape, and three LEDs.
+">
+      <img src="images/Activity1/5.jpg" style="width:100%" onclick="onClick(this)" alt="Prototype 2: Sketch a multi-interactive circuit prototype using pencils.">
+    
+      <img src="images/Activity1/6.jpg" style="width:100%" onclick="onClick(this)" alt="Prototype 2: Multi-interactive circuit prototype: Unpressed connection.
+">
+      <img src="images/Activity1/7.jpg" style="width:100%" onclick="onClick(this)" alt="Prototype 2: Multi-interactive circuit prototype: Pressed connection one.
+">
+      <img src="images/Activity1/8.jpg" style="width:100%" onclick="onClick(this)" alt="Prototype 2: Multi-interactive circuit prototype: Pressed connection two.
+">
+      <img src="images/Activity1/9.jpg" style="width:100%" onclick="onClick(this)" alt="Prototype 2: Multi-interactive circuit prototype: Pressed connection three.
+">
+      <img src="images/Activity1/10.jpg" style="width:100%" onclick="onClick(this)" alt="Prototype 2: Multi-interactive circuit prototype: Fully pressed.">
+    
+      <img src="images/Activity1/11.jpg" style="width:100%" onclick="onClick(this)" alt="Prototype 2: Prototype Display.">
+      <img src="images/Activity1/12.jpg" style="width:100%" onclick="onClick(this)" alt="Prototype 3: Constructing an interactive circuit prototype using one LED, connected via battery and copper tape.">
+      <img src="images/Activity1/13.jpg" style="width:100%" onclick="onClick(this)" alt="Prototype 3: Constructing an interactive circuit prototype using two LEDs, connected via battery and copper tape.">
+      <img src="images/Activity1/14.jpg" style="width:100%" onclick="onClick(this)" alt="Prototype 3: Constructing an interactive circuit prototype using three LEDs, connected via battery and copper tape.">
+      <img src="images/Activity1/15.jpg" style="width:100%" onclick="onClick(this)" alt="Prototype 3: Unpressed connection circuit prototype.">
+    
+      <img src="images/Activity1/16.jpg" style="width:100%" onclick="onClick(this)" alt="Prototype 4: Unpress-connected circuit prototype.">
+      <img src="images/Activity1/17.jpg" style="width:100%" onclick="onClick(this)" alt="Prototype 4: Interactive circuit prototype using multiple LEDs connected via battery and copper tape.">
+      <img src="images/Activity1/18.jpg" style="width:100%" onclick="onClick(this)" alt="Prototype 5: Interactive circuit prototype using pencil markings, battery, and one LED.">
+      <img src="images/Activity1/19.jpg" style="width:100%" onclick="onClick(this)" alt="Prototype 5: Prototype demonstration.">
+      <img src="images/Activity1/20.jpg" style="width:100%" onclick="onClick(this)" alt="Prototype 6: Interactive circuit prototype using copper tape, battery, and one LED.">
+   
+      <img src="images/Activity1/21.jpg" style="width:100%" onclick="onClick(this)" alt="Prototype 6: Prototype display.">
+      <img src="images/Activity1/22.jpg" style="width:100%" onclick="onClick(this)" alt="Prototype 6: Prototype display.">
+      <img src="images/Activity1/23.jpg" style="width:100%" onclick="onClick(this)" alt="Prototype 6: Prototype display.">
+      <img src="images/Activity1/24.jpg" style="width:100%" onclick="onClick(this)" alt="Prototype draft version display.">
+      <img src="images/Activity1/25.jpg" style="width:100%" onclick="onClick(this)" alt="Prototype draft version display.">
+    </div>
+  </div>
+  
+  <hr style="width:90%;border:5px solid grey;margin-top:80px" class="w3-round">
+
+  <div id="Activity2" class="w3-row-padding">
+    <h2>Activity 2</h2>
+    <div class="grid">
+      <img src="images/Activity2/26.jpg" style="width:100%" onclick="onClick(this)" alt="Interactive Circuit Design for Table: Example Diagram 1">
+      <img src="images/Activity2/27.jpg" style="width:100%" onclick="onClick(this)" alt="Interactive Circuit Design for Table: Example Diagram 2">
+      <img src="images/Activity2/28.jpg" style="width:100%" onclick="onClick(this)" alt="luminous table">
+      <img src="images/Activity2/29.jpg" style="width:100%" onclick="onClick(this)" alt="Interactive Circuit Design">
+      <img src="images/Activity2/30.jpg" style="width:100%" onclick="onClick(this)" alt="Summary: The table's edges glow, serving as a night light or ambient lighting.">
+    
+      <img src="images/Activity2/31.jpg" style="width:100%" onclick="onClick(this)" alt="Interactive Circuit Design for Bookmark: Example Diagram 1">
+      <img src="images/Activity2/32.jpg" style="width:100%" onclick="onClick(this)" alt="Interactive Circuit Design for Bookmark: Example Diagram 2">
+      <img src="images/Activity2/33.jpg" style="width:100%" onclick="onClick(this)" alt="Bookmark Style: Reading Light">
+      <img src="images/Activity2/34.jpg" style="width:100%" onclick="onClick(this)" alt="Interactive Circuit Design">
+      <img src="images/Activity2/35.jpg" style="width:100%" onclick="onClick(this)" alt="Summary: Convenient for nighttime reading, functioning as both a nightlight and a bookmark when inserted into books.">
+    
+      <img src="images/Activity2/36.jpg" style="width:100%" onclick="onClick(this)" alt="Interactive Circuit Design for Simplified Flashlight: Example 1">
+      <img src="images/Activity2/37.jpg" style="width:100%" onclick="onClick(this)" alt="Interactive Circuit Design for Simplified Flashlight: Example 2">
+      <img src="images/Activity2/38.jpg" style="width:100%" onclick="onClick(this)" alt="Simplified Flashlight">
+      <img src="images/Activity2/39.jpg" style="width:100%" onclick="onClick(this)" alt="Interactive Circuit Design">
+      <img src="images/Activity2/40.jpg" style="width:100%" onclick="onClick(this)" alt="Summary: A basic flashlight for emergencies. Light is focused using a sheet of paper, making it portable and compact.">
+    
+      <img src="images/Activity2/41.jpg" style="width:100%" onclick="onClick(this)" alt="Interactive Circuit Design for Plastic Bottle Night Light: Example 1">
+      <img src="images/Activity2/42.jpg" style="width:100%" onclick="onClick(this)" alt="Interactive Circuit Design for Plastic Bottle Night Light: Example 2">
+      <img src="images/Activity2/43.jpg" style="width:100%" onclick="onClick(this)" alt="Plastic Bottle Night Light">
+      <img src="images/Activity2/44.jpg" style="width:100%" onclick="onClick(this)" alt="Interactive Circuit Design">
+      <img src="images/Activity2/45.jpg" style="width:100%" onclick="onClick(this)" alt="Summary: Amplifies light using a plastic bottle.">
+   
+      <img src="images/Activity2/46.jpg" style="width:100%" onclick="onClick(this)" alt="Interactive Circuit Design for Light-Up Glasses: Example 1">
+      <img src="images/Activity2/47.jpg" style="width:100%" onclick="onClick(this)" alt="Interactive Circuit Design for Light-Up Glasses: Example 2">
+      <img src="images/Activity2/48.jpg" style="width:100%" onclick="onClick(this)" alt="Light-Up Glasses">
+      <img src="images/Activity2/49.jpg" style="width:100%" onclick="onClick(this)" alt="Interactive Circuit Design">
+      <img src="images/Activity2/50.jpg" style="width:100%" onclick="onClick(this)" alt="Summary: For use at night or in dimly lit areas. Provides illumination via a light source at the top of the glasses, making them easy to carry.">
+    </div>
+  </div>
+
+  <hr style="width:90%;border:5px solid grey;margin-top:80px" class="w3-round">
+
+  <div id="Project1" class="w3-container" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Project 1</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <h2>Final Project 1 Design</h2>
+    <h2>Wearable Interactive Affordance Based Circuit</h2>
+    <p>This headband is specifically designed for nighttime entertainment. It provides instant illumination in the dark or serves as decorative lighting at entertainment venues. Its structure consists of copper foil, a battery, and LED lights. My concept involves activating the circuit by applying external pressure to the internal battery, thereby controlling the headband's lighting on and off. The final design closely matches my original vision.
+    </p>
+    <video src="images/final/51.mp4" style="width:80%" onclick="onClick(this)" alt="Simple Flashlight" controls></video>
+
+    <hr style="width:90%;border:5px solid grey;margin-top:80px" class="w3-round">
+    
+    <h2>Non-Wearable Interactive Affordance Based Circuit</h2>
+    <p>This is a temporary night light designed specifically for nighttime use. Its purpose is to provide convenient, space-saving illumination for reading books at night, while also serving as a bookmark and refrigerator magnet. The materials consist of copper foil, batteries, LED lights, a flat silicone doll, and magnets. This night light underwent two design iterations during Activity 2. The video below demonstrates one of the versions.
+    </p>
+    <video src="images/final/52.mp4" style="width:80%" onclick="onClick(this)" alt="Bookmark-style night light" controls></video>
+	  
+  </div>
+
+   <div id="modal01" class="w3-modal w3-grey" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-center w3-transparent" style ="padding:20px">
+      <img id="img01" class="w3-image">
+      <h2 id="caption"></h2>
+
+  </div>
+
+</div>
+
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
+
+<script>
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+
+  // var captionUrl = document.getElementById("urLink");
+  // captionUrl.innerHTML = element.url;
+
+  //document.getElementById("urLink").src = element.url;
+}
+</script>
+
+</body>
+</html>

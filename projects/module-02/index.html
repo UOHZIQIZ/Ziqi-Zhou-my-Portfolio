@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <title>Media Motion and the Body Winter 2026</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {
+  font-family: "Poppins", sans-serif
+  }
+body {
+  font-size:16px;
+  }
+h1 { 
+  font-size:30px;
+  }
+h2 {
+  font-size:25px;
+  }
+  h3 {
+  font-size:18px;
+  }
+img {
+  width: 100%;
+  height: 100%;
+}
+.grid {
+  display: inline-grid;
+  grid-template-columns: auto auto auto auto auto;
+}
+.w3-half img{
+  margin-bottom:-6px;
+  margin-top:16px;
+  opacity:0.8;
+  cursor:pointer
+  } */
+.w3-half img:hover{
+  opacity:1
+  }
+
+.container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%;
+    /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+.responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+</style>
+<body>
+
+<nav class="w3-sidebar w3-light-grey w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:200px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-display-topleft" style="display:none;font-size:22px"></a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>IXD<br>DESN 22848 <br> Winter-2026</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#Home" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+    <a href="#Module1" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Module 1</a> 
+    <a href="#Activity1" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Activity 1</a> 
+    <a href="#Activity2" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Activity 2</a> 
+    <a href="#Project2" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Project 2</a>  
+  </div>
+</nav>
+
+<div class="w3-overlay" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<div class="w3-main" style="margin-left:220px;margin-right:20px">
+
+  <div class="w3-container" style="margin-top:80px" id="default">
+    <h1 class="w3-jumbo" id="Home"><b>Module 2 Formstorming</b></h1>
+    <h1 class="w3-xxxlarge w3-text-blue"><b>Weekly Activity Template</b></h1>
+      <h1 class="w3-xxxlarge w3-text-blue"><b>Ziqi Zhou</b></h1>
+    <hr style="width:50px;border:5px solid grey" class="w3-round">
+  </div>
+  
+  <div id="Module1" class="w3-container" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Project 2</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <h2>Module 2</h2>
+    <h3>This module explores the relationship between sound and interaction. In Activity 1, I recorded everyday sounds. In Activity 2, I learned to use P5.js to create audio-driven interactive visual effects.
+    </h3>
+  </div>
+
+  <div id="Activity1" >
+    <h2>Activity 1</h2>
+    <div class="grid">
+      <img src="images/Activity1/1.jpg" style="width:100%" onclick="onClick(this)" alt="Flowing Water sound">
+      <img src="images/Activity1/2.jpg" style="width:100%" onclick="onClick(this)" alt="Dryer sound">
+      <img src="images/Activity1/3.jpg" style="width:100%" onclick="onClick(this)" alt="Water dispenser sound">
+      <img src="images/Activity1/4.jpg" style="width:100%" onclick="onClick(this)" alt="Toilet flushing sound">
+      <img src="images/Activity1/5.jpg" style="width:100%" onclick="onClick(this)" alt="Chair wheels turning sound">
+    
+      <audio controls>
+        <source src="audio/Sound001.m4a" type="audio/mp3">
+      </audio>
+      <audio controls>
+        <source src="audio/Sound002.m4a" type="audio/mp3">
+      </audio>
+      <audio controls>
+        <source src="audio/Sound003.m4a" type="audio/mp3">
+      </audio>
+      <audio controls>
+        <source src="audio/Sound004.m4a" type="audio/mp3">
+      </audio>
+      <audio controls>
+        <source src="audio/Sound005.m4a" type="audio/mp3">
+      </audio>
+
+      <img src="images/Activity1/6.jpg" style="width:100%" onclick="onClick(this)" alt="Drawer sound">
+      <img src="images/Activity1/7.jpg" style="width:100%" onclick="onClick(this)" alt="Power switch button sound">
+      <img src="images/Activity1/8.jpg" style="width:100%" onclick="onClick(this)" alt="Mouse button sound">
+      <img src="images/Activity1/9.jpg" style="width:100%" onclick="onClick(this)" alt="Keyboard key sound">
+      <img src="images/Activity1/10.jpg" style="width:100%" onclick="onClick(this)" alt="Heating air outlet sound">
+    
+      <audio controls>
+        <source src="audio/Sound006.m4a" type="audio/mp3">
+      </audio>
+      <audio controls>
+        <source src="audio/Sound007.m4a" type="audio/mp3">
+      </audio>
+      <audio controls>
+        <source src="audio/Sound008.m4a" type="audio/mp3">
+      </audio>
+      <audio controls>
+        <source src="audio/Sound009.m4a" type="audio/mp3">
+      </audio>
+      <audio controls>
+        <source src="audio/Sound010.m4a" type="audio/mp3">
+      </audio>
+      
+      <img src="images/Activity1/11.jpg" style="width:100%" onclick="onClick(this)" alt="Barrier-free door opening button sound">
+      <img src="images/Activity1/12.jpg" style="width:100%" onclick="onClick(this)" alt="Door opening and closing sound">
+      <img src="images/Activity1/13.jpg" style="width:100%" onclick="onClick(this)" alt="Obstacle drag sound">
+      <img src="images/Activity1/14.jpg" style="width:100%" onclick="onClick(this)" alt="Walking sound">
+      <img src="images/Activity1/15.jpg" style="width:100%" onclick="onClick(this)" alt="The lid rotates sound">
+    
+      <audio controls>
+        <source src="audio/Sound011.m4a" type="audio/mp3">
+      </audio>
+      <audio controls>
+        <source src="audio/Sound012.m4a" type="audio/mp3">
+      </audio>
+      <audio controls>
+        <source src="audio/Sound013.m4a" type="audio/mp3">
+      </audio>
+      <audio controls>
+        <source src="audio/Sound014.m4a" type="audio/mp3">
+      </audio>
+      <audio controls>
+        <source src="audio/Sound015.m4a" type="audio/mp3">
+      </audio>
+      
+      <img src="images/Activity1/16.jpg" style="width:100%" onclick="onClick(this)" alt="Plastic bottle sound">
+      <img src="images/Activity1/17.jpg" style="width:100%" onclick="onClick(this)" alt="Zipper sound">
+      <img src="images/Activity1/18.jpg" style="width:100%" onclick="onClick(this)" alt="Clothing friction sound">
+      <img src="images/Activity1/19.jpg" style="width:100%" onclick="onClick(this)" alt="Key-press pen sound">
+      <img src="images/Activity1/20.jpg" style="width:100%" onclick="onClick(this)" alt="Tape tear sound">
+   
+      <audio controls>
+        <source src="audio/Sound016.m4a" type="audio/mp3">
+      </audio>
+      <audio controls>
+        <source src="audio/Sound017.m4a" type="audio/mp3">
+      </audio>
+      <audio controls>
+        <source src="audio/Sound018.m4a" type="audio/mp3">
+      </audio>
+      <audio controls>
+        <source src="audio/Sound019.m4a" type="audio/mp3">
+      </audio>
+      <audio controls>
+        <source src="audio/Sound020.m4a" type="audio/mp3">
+      </audio>
+      
+      <img src="images/Activity1/21.jpg" style="width:100%" onclick="onClick(this)" alt="Plastic bag sound">
+      <img src="images/Activity1/22.jpg" style="width:100%" onclick="onClick(this)" alt="Bell sound">
+      <img src="images/Activity1/23.jpg" style="width:100%" onclick="onClick(this)" alt="Headphone flip cover sound">
+      <img src="images/Activity1/24.jpg" style="width:100%" onclick="onClick(this)" alt="Sphere Landing sound">
+      <img src="images/Activity1/25.jpg" style="width:100%" onclick="onClick(this)" alt="Microwave oven sound">
+      <audio controls>
+        <source src="audio/Sound021.m4a" type="audio/mp3">
+      </audio>
+      <audio controls>
+        <source src="audio/Sound022.m4a" type="audio/mp3">
+      </audio>
+      <audio controls>
+        <source src="audio/Sound023.m4a" type="audio/mp3">
+      </audio>
+      <audio controls>
+        <source src="audio/Sound024.m4a" type="audio/mp3">
+      </audio>
+      <audio controls>
+        <source src="audio/Sound025.m4a" type="audio/mp3">
+      </audio>
+     </div>
+  </div>
+  
+  <hr style="width:90%;border:5px solid grey;margin-top:80px" class="w3-round">
+
+  <div id="Activity2" class="w3-row-padding">
+    <h2>Activity 2</h2>
+    <div class="grid">
+      <video src="images/Activity2/26.mp4" controls loop muted playsinline preload="none" style="width:100%;aspect-ratio:4/3;object-fit:contain"></video>
+      <video src="images/Activity2/27.mp4" controls loop muted playsinline preload="none" style="width:100%;aspect-ratio:4/3;object-fit:contain"></video>
+      <video src="images/Activity2/28.mp4" controls loop muted playsinline preload="none" style="width:100%;aspect-ratio:4/3;object-fit:contain"></video>
+      <video src="images/Activity2/29.mp4" controls loop muted playsinline preload="none" style="width:100%;aspect-ratio:4/3;object-fit:contain"></video>
+      <video src="images/Activity2/30.mp4" controls loop muted playsinline preload="none" style="width:100%;aspect-ratio:4/3;object-fit:contain"></video>
+    
+      <video src="images/Activity2/31.mp4" controls loop muted playsinline preload="none" style="width:100%;aspect-ratio:4/3;object-fit:contain"></video>
+      <video src="images/Activity2/32.mp4" controls loop muted playsinline preload="none" style="width:100%;aspect-ratio:4/3;object-fit:contain"></video>
+      <video src="images/Activity2/33.mp4" controls loop muted playsinline preload="none" style="width:100%;aspect-ratio:4/3;object-fit:contain"></video>
+      <video src="images/Activity2/34.mp4" controls loop muted playsinline preload="none" style="width:100%;aspect-ratio:4/3;object-fit:contain"></video>
+      <video src="images/Activity2/35.mp4" controls loop muted playsinline preload="none" style="width:100%;aspect-ratio:4/3;object-fit:contain"></video>
+    
+      <video src="images/Activity2/36.mp4" controls loop muted playsinline preload="none" style="width:100%;aspect-ratio:4/3;object-fit:contain"></video>
+      <video src="images/Activity2/37.mp4" controls loop muted playsinline preload="none" style="width:100%;aspect-ratio:4/3;object-fit:contain"></video>
+      <video src="images/Activity2/38.mp4" controls loop muted playsinline preload="none" style="width:100%;aspect-ratio:4/3;object-fit:contain"></video>
+      <video src="images/Activity2/39.mp4" controls loop muted playsinline preload="none" style="width:100%;aspect-ratio:4/3;object-fit:contain"></video>
+      <video src="images/Activity2/40.mp4" controls loop muted playsinline preload="none" style="width:100%;aspect-ratio:4/3;object-fit:contain"></video>
+    
+      <video src="images/Activity2/41.mp4" controls loop muted playsinline preload="none" style="width:100%;aspect-ratio:4/3;object-fit:contain"></video>
+      <video src="images/Activity2/42.mp4" controls loop muted playsinline preload="none" style="width:100%;aspect-ratio:4/3;object-fit:contain"></video>
+      <video src="images/Activity2/43.mp4" controls loop muted playsinline preload="none" style="width:100%;aspect-ratio:4/3;object-fit:contain"></video>
+      <video src="images/Activity2/44.mp4" controls loop muted playsinline preload="none" style="width:100%;aspect-ratio:4/3;object-fit:contain"></video>
+      <video src="images/Activity2/45.mp4" controls loop muted playsinline preload="none" style="width:100%;aspect-ratio:4/3;object-fit:contain"></video>
+   
+      <video src="images/Activity2/46.mp4" controls loop muted playsinline preload="none" style="width:100%;aspect-ratio:4/3;object-fit:contain"></video>
+      <video src="images/Activity2/47.mp4" controls loop muted playsinline preload="none" style="width:100%;aspect-ratio:4/3;object-fit:contain"></video>
+      <video src="images/Activity2/48.mp4" controls loop muted playsinline preload="none" style="width:100%;aspect-ratio:4/3;object-fit:contain"></video>
+      <video src="images/Activity2/49.mp4" controls loop muted playsinline preload="none" style="width:100%;aspect-ratio:4/3;object-fit:contain"></video>
+      <video src="images/Activity2/50.mp4" controls loop muted playsinline preload="none" style="width:100%;aspect-ratio:4/3;object-fit:contain"></video>
+    </div>
+  </div>
+
+  <hr style="width:90%;border:5px solid grey;margin-top:80px" class="w3-round">
+
+  <div id="Project2" class="w3-container" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Project 2</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <h2>Final Project 2 Design</h2>
+    <h2>P5 Interactive Audio Web Header Portfolio</h2>
+   
+    <p>The following is the P5 Interactive Audio Web Header Portfolio. By studying and applying the contents of Module 2 Tutorial 1 to 6 in practice, as well as combining the new p5 code found later, I explored and presented a new visual form. All visual effects are driven by sound. Real-time conversion through microphone input brings about changes in visual effects. In the project built with p5.js, an immersive interactive digital experience is provided by delving into the synergy among sound frequencies, dynamic graphics, and user creativity.
+      <br>
+      <p>Click <a href="../sound-demo/index.html" target="_blank">here</a> to see it working on my server
+        <br>
+          <br>
+		  <video width="100%" controls="" autoplay="" loop="">
+          <source src="images/final/final-optimized.mp4" type="video/mp4">
+      </video>
+        <br>
+      <br>
+  </p>
+  </div>
+
+   <div id="modal01" class="w3-modal w3-grey" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-center w3-transparent" style ="padding:20px">
+      <img id="img01" class="w3-image">
+     
+      <h2 id="caption"></h2>
+
+  </div>
+
+</div>
+
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></p></div>
+
+<script>
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+
+  // var captionUrl = document.getElementById("urLink");
+  // captionUrl.innerHTML = element.url;
+
+  //document.getElementById("urLink").src = element.url;
+}
+</script>
+
+</body>
+</html>
